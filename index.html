@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>UML Generator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #101010;
+            color: white;
+            text-align: center;
+        }
+
+        p {
+            color: #494949;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container-fluid">
+    <!--<h1>UML Generator <span class="label label-default">New</span></h1>-->
+</div>
+
+<!-- nav -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">UML Generator</a>
+        </div>
+        <ul class="nav navbar-nav">
+
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">File <span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">New...</a></li>
+                    <li><a href="#">Rename</a></li>
+                    <li><a href="#">Save</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Close</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Edit <span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Undo</a></li>
+                    <li><a href="#">Redo</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Cut</a></li>
+                    <li><a href="#">Copy</a></li>
+                    <li><a href="#">Paste</a></li>
+                    <li><a href="#">Delete</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Duplicate</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">View <span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Zoom In</a></li>
+                    <li><a href="#">Zoom Out</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Arrange <span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Rotate 90°</a></li>
+                    <li><a href="#">Autosize</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Group</a></li>
+                    <li><a href="#">Ungroup</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Extras <span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Change theme</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Copy on connect</a></li>
+                    <li><a href="#">Edit Diagram...</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Help <span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">User Manual</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About authors</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <button type="button" class="btn btn-danger btn-small" data-toggle="modal" data-target="#myModal"
+                style="float: right">Zamknij
+        </button>
+        <a href="#" class="btn btn-success btn-small" style="float: right">
+            <span class="glyphicon glyphicon-print"></span> Print diagram
+        </a>
+    </div>
+
+</nav>
+
+<div class="alert alert-info alert-dismissable fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Info!</strong> Wersja beta
+</div>
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <!-- lewy panel -->
+        <div class="col-sm-3" style="">
+
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">General</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse in">
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Scratchpad</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">UML</a>
+                        </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- siatka -->
+        <div id="graphContainer" class="col-sm-6"
+             style="overflow: hidden; background:url('img/grid.gif'); min-height: 550px">
+
+
+        </div>
+
+        <!-- prawy panel -->
+        <div class="col-sm-3" style="">
+            <div class="panel-group" id="accordion2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse12">Diagram</a>
+                        </h4>
+                    </div>
+                    <div id="collapse12" class="panel-collapse collapse in">
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse22">Options</a>
+                        </h4>
+                    </div>
+                    <div id="collapse22" class="panel-collapse collapse">
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse32">Examples</a>
+                        </h4>
+                    </div>
+                    <div id="collapse32" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Tutaj będą proste przykładowe diagramy
+                            <button id="examplesHelloWorld" type="button"
+                                    class="btn btn-default">Hello World
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Czy na pewno chcesz wyjść?</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Zmiany nie zostaną zapisane</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="footer">
+    <p>&copy Chodorek, Bielecki, Bugajski, Podkowa</p>
+</div>
+
+
+<script src="jquery-3.2.1.min.js"></script>
+<script src="bootstrap-3.3.7.min.js"></script>
+<script type="text/javascript"> mxBasePath = 'mxGraph/javascript/src';</script>
+<script type="text/javascript" src="mxGraph/javascript/src/js/mxClient.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/helloWorld.js"></script>
+
+</body>
+</html>
